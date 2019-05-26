@@ -1,0 +1,142 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    background-color: #e2e7ec;
+    margin: 0;
+    padding-top: 5.625vw;
+    color: #1d1d1d;
+    font-family: 'hanskendrick-regular-webfont', Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+}
+
+.visually-hidden{
+   position: absolute !important;
+   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+   clip: rect(1px, 1px, 1px, 1px);
+   padding:0 !important;
+   border:0 !important;
+   height: 1px !important;
+   width: 1px !important;
+   overflow: hidden;
+}
+
+.ba-container {
+    max-width: 1140px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.ba-row {
+    display: flex;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+}
+
+.ba-col {
+    padding: 0 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.article {
+    width: 100%;
+    background-color: #FFF;
+}
+
+.article--height {
+    height: 543px;
+}
+
+.article__info {
+    padding: 0 15px 20px;
+}
+
+.article__big {
+    flex-grow: 1;
+    position: relative;
+}
+
+.article__big:before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(transparent, rgba(0,0,0, 1));
+}
+
+.article__big .article__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 15px;
+    padding: 0 15px 20px;
+}
+
+.article__title {
+    font-size: 1.375rem;
+    line-height: 1.3636;
+    text-transform: uppercase;
+    margin: 0 0 2.06666em;
+}
+
+.article__title--big {
+    font-size: 1.875rem;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.article__time {
+    text-transform: uppercase;
+    font-size: 0.8126rem;
+    line-height: 2.3;
+    color: #818181;
+}
+
+.article-author__img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 0 15px 20px;
+}
+
+.article__info .article__title:only-child {
+    padding-top: 60px;
+}
+
+@media screen and (min-width: 1023px) {
+    html {
+        font-size: 16px;
+    }
+
+    .ba-col {
+        width: 33.3333%;
+    }
+
+    .ba-col--big {
+        width: auto;
+        -webkit-flex-grow: 1;
+                flex-grow: 1;
+    }
+
+}

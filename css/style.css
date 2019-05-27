@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding-top: 5.625vw;
     color: #1d1d1d;
-    font-family: 'hanskendrick-regular-webfont', Helvetica, sans-serif;
+    font-family: 'hans_kendrickregular', Helvetica, sans-serif;
 }
 
 a {
@@ -67,6 +67,7 @@ img {
 
 .article__info {
     padding: 0 15px 20px;
+    position: relative;
 }
 
 .article__big {
@@ -100,10 +101,21 @@ img {
     margin: 0 0 2.06666em;
 }
 
+.article__title:focus {
+    color: #ffcc99;
+    font-size: 1.37rem;
+}
+
 .article__title--big {
     font-size: 1.875rem;
     color: #fff;
     line-height: 1.2;
+}
+
+.article__title--abs {
+    position: absolute;
+    left: 14px;
+    top: 25px;
 }
 
 .article__time {
@@ -113,15 +125,33 @@ img {
     color: #818181;
 }
 
+.article-author {
+    position: relative;
+}
+
 .article-author__img {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    margin: 0 15px 20px;
+    
 }
 
-.article__info .article__title:only-child {
-    padding-top: 33px;
+.article-author__link {
+    position: absolute;
+    top: 165px;
+    left: 10px;
+}
+
+.article-author__link-abs {
+    position: absolute;
+    top: 195px;
+    left: 10px;
+    
+}
+
+.article-author__link:focus {
+    opacity: 0.7;
+    transition: 0.5s ease-in;
 }
 
 @media screen and (min-width: 1023px) {
@@ -137,6 +167,19 @@ img {
         width: auto;
         -webkit-flex-grow: 1;
                 flex-grow: 1;
+    }
+
+    .article-author__link:hover,
+    .article-author__link:focus {
+        opacity: 0.7;
+        transform: scale(1.1);
+        transition: 0.5s ease-in;
+    }
+
+    .article__title:focus,
+    .article__title:hover {
+        color: #ffcc99;
+        transition: 0.5s ease-in;
     }
 
 }
